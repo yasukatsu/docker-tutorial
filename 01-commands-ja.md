@@ -109,10 +109,13 @@ CMD ["default message"]
 
 # 課題
 
-- 01-commandsディレクトリのDockerfileを利用してイメージを作成してください
-- 作成したイメージを実行してください
-- Dockerfileを編集して、以下の挙動を持つイメージをつくってください
+- Q: 01-commandsディレクトリのDockerfileを利用してイメージを作成してください
+    - A: docker build -t [イメージ名:タグ名] ./01-commands
+- Q: 作成したイメージを実行してください
+    - A: docker run [上記で作成したイメージ名:タグ名]
+- Q: Dockerfileを編集して、以下の挙動を持つイメージをつくってください
   - `docker run <image>` で `hello, world`と出力。
   - `docker run <image> hoge` で `hello, hoge` と出力。
-- 上記のコンテナの/bin/shにインタラクティブモードでログインしてください。
+- Q: 上記のコンテナの/bin/shにインタラクティブモードでログインしてください。
   - ENTRYPOINTの上書きが必要になると思います
+    - A: docker run -it --entrypoint="/bin/sh" [上記で作成したイメージ名:タグ名]
